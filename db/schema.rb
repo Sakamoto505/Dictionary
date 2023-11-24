@@ -28,8 +28,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_21_152415) do
     t.string "translation"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.tsvector "search_vector"
-    t.index ["search_vector"], name: "index_words_on_search_vector", using: :gin
+    t.virtual "tsv_word", type: :tsvector, as: "to_tsvector('simple'::regconfig, (COALESCE(word, ''::character varying))::text)", stored: true
+    t.index ["tsv_word"], name: "index_words_on_tsv_word", using: :gin
   end
 
 end
