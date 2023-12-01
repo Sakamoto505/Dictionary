@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
-  root 'words#index'
-  resources :words
+  root 'words#search'
+
+
+  resources :words do
+    collection do
+      get 'search'
+    end
+  end
 end

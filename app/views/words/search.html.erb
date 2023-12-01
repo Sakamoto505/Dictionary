@@ -1,0 +1,22 @@
+<h1>Словарь Ингушского Языка</h1>
+
+
+<%= form_tag(search_words_path, method: :get) do %>
+  <%= label_tag :q, "Введите ингушское или русское для поиска:" %>
+  <%= text_field_tag :q, params[:q], placeholder: "Найти слово или перевод" %>
+  <%= select_tag(:language, options_for_select(['ingush', 'russian'], params[:language] || "ingush")) %>
+  <%= submit_tag "Искать" %>
+<% end %>
+
+<% if words_results && words_results.any? %>
+  <h2>Найдено <%= words_results.count %> слов:</h2>
+  <ul>
+    <% words_results.each do |word| %>
+      <li><%= "#{word.ingush_word} - #{word.russian_word}" %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>Ничего не найдено.</p>
+
+  <%== pagy_nav(@pagy) if @pagy.pages > 1 %>
+<% end %>

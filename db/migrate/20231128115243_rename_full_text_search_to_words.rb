@@ -1,4 +1,4 @@
-class AddFullTextSearchToWords < ActiveRecord::Migration[7.0]
+class RenameFullTextSearchToWords < ActiveRecord::Migration[7.0]
   disable_ddl_transaction!
   def up
     execute <<-SQL
