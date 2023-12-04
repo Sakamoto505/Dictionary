@@ -8,7 +8,8 @@
   <%= submit_tag "Искать" %>
 <% end %>
 
-<% if words_results && words_results.any? %>
+<% if words_results.any? %>
+
   <h2>Найдено <%= words_results.count %> слов:</h2>
   <ul>
     <% words_results.each do |word| %>
