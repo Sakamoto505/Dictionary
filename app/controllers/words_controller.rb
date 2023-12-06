@@ -1,6 +1,6 @@
+# frozen_string_literal: true
 
 class WordsController < ApplicationController
-
   # def index
   #   @pagy, @words = pagy(Word.all, items: 10)
   # end
@@ -17,7 +17,7 @@ class WordsController < ApplicationController
 
   private
 
-  def  search_params
+  def search_params
     params.permit(:q, :language).to_unsafe_h
   end
 end

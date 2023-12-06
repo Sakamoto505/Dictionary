@@ -1,0 +1,11 @@
+<% if words_results.any? %>
+  <h2><%= t("search.found") %> <%= words_results.count %> :</h2>
+  <ul>
+    <% words_results.each do |word| %>
+      <li><%= "#{word.ingush_word} - #{word.russian_word}" %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p><%= t("search.nothing_found") %></p>
+  <%== pagy_nav(pagy) if pagy.pages > 1 %>
+<% end %>
