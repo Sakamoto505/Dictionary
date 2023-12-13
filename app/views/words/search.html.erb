@@ -1,5 +1,6 @@
 <h1><%= t("search.translation") %></h1>
 
+<turbo-frame id="search_results">
 
 <%= form_tag(search_words_path, method: :get) do %>
   <%= label_tag :q, t("search.label_tag") %>
@@ -9,3 +10,4 @@
 <% end %>
 
 <%= render partial: 'shared/words_results', locals: { words_results: words_results, pagy: pagy } %>
+  </turbo-frame>

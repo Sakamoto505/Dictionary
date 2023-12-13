@@ -1,3 +1,5 @@
+<turbo-frame id="words_results">
+
 <% if words_results.any? %>
   <h2><%= t("search.found") %> <%= words_results.count %> :</h2>
   <ul>
@@ -9,3 +11,4 @@
   <p><%= t("search.nothing_found") %></p>
   <%== pagy_nav(pagy) if pagy.pages > 1 %>
 <% end %>
+</turbo-frame>
