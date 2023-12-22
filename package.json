@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "@rails/webpacker": "5.4.4",
+    "stimulus": "^3.2.2",
+    "stimulus-lightbox": "^3.2.0",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.12"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3"
+  }
+}
