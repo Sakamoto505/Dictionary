@@ -1,13 +1,15 @@
+# frozen_string_literal: true
+
 class RenameFullTextSearchToTranslations < ActiveRecord::Migration[7.0]
   disable_ddl_transaction!
   def up
     execute <<-SQL
-      ALTER TABLE 
-        words 
-      ADD 
+      ALTER TABLE#{' '}
+        words#{' '}
+      ADD#{' '}
         COLUMN tsv_russian_word TSVECTOR GENERATED ALWAYS AS (
           to_tsvector(
-            'pg_catalog.simple', 
+            'pg_catalog.simple',#{' '}
              COALESCE(russian_word, '')
           )
         ) STORED;
