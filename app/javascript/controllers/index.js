@@ -7,4 +7,4 @@ import { eagerLoadControllersFrom } from "@hotwired/stimulus-loading"
 eagerLoadControllersFrom("controllers", application)
 
 import LanguageController from "./language_toggle_controller"
-application.register("language", LanguageController)
+application.register("language-toggle", LanguageController)

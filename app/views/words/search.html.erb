@@ -1,16 +1,37 @@
-<h1><%= t("search.translation") %></h1>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Заголовок вашей страницы</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-<turbo-frame id="search_results">
+<header>
+  <h1><%= t("search.translation") %></h1>
+</header>
 
-<%= form_tag(search_words_path, method: :get) do %>
-  <%= label_tag :q, t("search.label_tag") %>
-  <%= text_field_tag :q, params[:q], placeholder: "Найти слово или перевод" %>
-    <button data-controller="language-toggle" data-action="click->language-toggle#toggleLanguage">
+<main>
+  <div data-controller="language-toggle">
+    <%= form_tag(search_words_path, method: :get, id: "language_form") do %>
+      <label for="q"><%= t("search.label_tag") %></label>
+      <%= text_field_tag :q, params[:q], placeholder: "Найти слово или перевод" %>
+
+      <%= hidden_field_tag :language, params[:language] || 'ingush', data: { language_toggle_target: 'languageField' } %>
+
+      <%= submit_tag t("search.search") %>
+    <% end %>
+
+    <button data-action="click->language-toggle#toggleLanguage" data-language-toggle-target="languageButton">
       Toggle Language
     </button>
-  <%= select_tag(:language, options_for_select(['ingush', 'russian'], params[:language] || "ingush")) %>
-  <%= submit_tag t("search.search") %>
-<% end %>
 
-<%= render partial: 'shared/words_results', locals: { words_results: words_results, pagy: pagy } %>
-</turbo-frame>
+    <div class="results">
+      <%= render partial: 'shared/words_results', locals: { words_results: words_results, pagy: pagy } %>
+    </div>
+  </div>
+</main>
+
+</body>
+</html>
