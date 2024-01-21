@@ -1,22 +1,35 @@
-// app/javascript/controllers/language_toggle_controller.js
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-    static targets = ['languageButton', 'languageField'];
+    static targets = ['languageButton', 'languageField', 'searchInput']; // Добавлен searchInput в targets
 
     connect() {
-        console.log('Контроллер успешно подключен!');
+        this.updateLanguageButton();
+        this.setPlaceholder(); // Установить начальный плейсхолдер при подключении
     }
 
     toggleLanguage() {
-        console.log('Метод toggleLanguage вызван!');
         const currentLanguage = this.languageFieldTarget.value;
         const newLanguage = currentLanguage === 'ingush' ? 'russian' : 'ingush';
-        console.log(this)
-        // Обновляем значение скрытого поля
         this.languageFieldTarget.value = newLanguage;
+        this.updateLanguageButton();
+        this.setPlaceholder(); // Обновить плейсхолдер после переключения языка
+    }
 
+    updateLanguageButton() {
+        const currentLanguage = this.languageFieldTarget.value;
+        this.languageButtonTarget.textContent = currentLanguage === 'ingush' ? 'Ингушский' : 'Русский';
+    }
 
-        console.log(`Переключение языка на: ${newLanguage}`);
+    setPlaceholder() {
+        const currentLanguage = this.languageFieldTarget.value;
+        const placeholders = {
+            ingush: 'Поиск идет на ингушском...',
+            russian: 'Поиск идет на русском...'
+        };
+        // Убедитесь, что searchInputTarget уже доступен
+        if (this.hasSearchInputTarget) {
+            this.searchInputTarget.placeholder = placeholders[currentLanguage];
+        }
     }
 }

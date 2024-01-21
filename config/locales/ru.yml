@@ -6,4 +6,6 @@ ru:
     search: 'Искать'
     nothing_found: 'Ничего не найдено'
     found: 'Найдено слов'
-
+    placeholder:
+      ingush: "Поиск идет на ингушском..."
+      russian: "Поиск идет на русском..."
