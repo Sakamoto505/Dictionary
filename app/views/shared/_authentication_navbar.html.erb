@@ -1,0 +1,7 @@
+<% if rodauth.logged_in? %>
+  <%= link_to "Sign out", rodauth.logout_path, class: "btn btn-danger", data: { turbo_method: :post } %>
+<% else %>
+  <%= link_to "Sign in", rodauth.login_path, class: "btn btn-primary", style: "text-decoration: none; color: #ffffff; background-color: #007bff; padding: 10px 15px; border-radius: 5px;" %>
+  <%= raw("&nbsp; &nbsp;") %>
+  <%= link_to "Sign up", rodauth.create_account_path, class: "btn btn-success", style: "text-decoration: none; color: #ffffff; background-color: #28a745; padding: 10px 15px; border-radius: 5px;" %>
+<% end %>
