@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
-file_path = '/Users/ramazan/Downloads/1russko_ingushskiy_slovar.txt'
+require_relative 'config/environment'
+
+file_path = '/home/pc/Документы/1russko_ingushskiy_slovar.txt'
 
 File.open(file_path, 'r').each_line do |line|
   parts = line.chomp.split('*').map(&:strip).reject(&:empty?)
