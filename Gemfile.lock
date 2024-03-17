@@ -311,7 +311,7 @@ DEPENDENCIES
   jbuilder
   jetrockets-standard (~> 1.29)
   pagy
-  pg
+  pg (= 1.5.4)
   pry
   puma (~> 5.0)
   rails (~> 7.0.8)

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Email Styling</title>
+</head>
+<body>
+<div class="container">
+  <p class="message">Someone has requested a login link for the account associated with this email address. If you did not request a login link, please ignore this message. If you requested a login link, please go to <a href="<%= @rodauth.email_auth_email_link %>" class="link">login to this account</a>.</p>
+</div>
+</body>
+</html>

@@ -28,14 +28,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_28_115800) do
     t.string "russian_word"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.virtual "tsv_word", type: :tsvector, as: "to_tsvector('simple'::regconfig, (COALESCE(ingush_word, ''::character varying))::text)", stored: true
     t.virtual "tsv_translation", type: :tsvector, as: "to_tsvector('simple'::regconfig, (COALESCE(russian_word, ''::character varying))::text)", stored: true
     t.virtual "tsv_ingush_word", type: :tsvector, as: "to_tsvector('simple'::regconfig, (COALESCE(ingush_word, ''::character varying))::text)", stored: true
     t.virtual "tsv_russian_word", type: :tsvector, as: "to_tsvector('simple'::regconfig, (COALESCE(russian_word, ''::character varying))::text)", stored: true
     t.index ["tsv_ingush_word"], name: "index_words_on_tsv_ingush_word", using: :gin
     t.index ["tsv_russian_word"], name: "index_words_on_tsv_russian_word", using: :gin
     t.index ["tsv_translation"], name: "index_words_on_tsv_translation", using: :gin
-    t.index ["tsv_word"], name: "index_words_on_tsv_word", using: :gin
   end
 
 end

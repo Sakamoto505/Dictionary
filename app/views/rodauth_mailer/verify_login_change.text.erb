@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="rodauth.css">
+  <title>Email Styling</title>
+</head>
+<body>
+<div class="container">
+  <p class="message">Someone with an account has requested their login be changed to this email address:</p>
+
+  <ul class="message" style="list-style: none; padding: 0;">
+    <li>Old email: <%= @account.email %></li>
+    <li>New email: <%= @new_email %></li>
+  </ul>
+
+  <p class="message">If you did not request this login change, please ignore this message. If you requested this login change, please go to <a href="<%= @rodauth.verify_login_change_email_link %>" class="link">verify the login change</a> to verify the login change.</p>
+</div>
+</body>
+</html>
