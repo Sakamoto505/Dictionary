@@ -1,0 +1,718 @@
+Started GET "/" for 127.0.0.1 at 2024-03-17 19:42:08 +0300
+  
+ActiveRecord::NoDatabaseError (We could not find your database: dictionary_development. Which can be found in the database configuration file located at config/database.yml.
+
+To resolve this issue:
+
+- Did you create the database for this app, or delete it? You may need to create your database.
+- Has the database name changed? Check your database.yml config has the correct database name.
+
+To create your database, run:
+
+        bin/rails db:create
+):
+  
+activerecord (7.0.8) lib/active_record/connection_adapters/postgresql_adapter.rb:81:in `rescue in new_client'
+activerecord (7.0.8) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (7.0.8) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.8) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.8) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.8) lib/active_record/migration.rb:648:in `connection'
+activerecord (7.0.8) lib/active_record/migration.rb:643:in `build_watcher'
+activerecord (7.0.8) lib/active_record/migration.rb:625:in `block in call'
+activerecord (7.0.8) lib/active_record/migration.rb:624:in `synchronize'
+activerecord (7.0.8) lib/active_record/migration.rb:624:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.6) lib/rack/proxy.rb:87:in `call'
+railties (7.0.8) lib/rails/engine.rb:530:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/rails/actions" for 127.0.0.1 at 2024-03-17 19:42:14 +0300
+  [1m[35m (453.3ms)[0m  [1m[35mCREATE DATABASE "dictionary_development" ENCODING = 'unicode'[0m
+  [1m[35m (235.8ms)[0m  [1m[35mCREATE DATABASE "dictionary_test" ENCODING = 'unicode'[0m
+Started GET "/" for 127.0.0.1 at 2024-03-17 19:42:15 +0300
+  [1m[35m (44.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (38.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 7 pending migrations:
+
+20231116114516_create_words.rb
+20231116225919_create_pg_search_documents.rb
+20231121152415_add_full_text_search_to_words.rb
+20231125161210_add_full_text_search_to_translations.rb
+20231128114153_rename_word_column.rb
+20231128115243_rename_full_text_search_to_words.rb
+20231128115800_rename_full_text_search_to_translations.rb
+
+
+):
+  
+activerecord (7.0.8) lib/active_record/migration.rb:662:in `check_pending!'
+activerecord (7.0.8) lib/active_record/migration.rb:627:in `block (2 levels) in call'
+activesupport (7.0.8) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.8) lib/active_record/migration.rb:632:in `block in call'
+activerecord (7.0.8) lib/active_record/migration.rb:624:in `synchronize'
+activerecord (7.0.8) lib/active_record/migration.rb:624:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.6) lib/rack/proxy.rb:87:in `call'
+railties (7.0.8) lib/rails/engine.rb:530:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/rails/actions" for 127.0.0.1 at 2024-03-17 19:42:18 +0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7894266242681957880)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateWords (20231116114516)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (15.2ms)[0m  [1m[35mCREATE TABLE "words" ("id" bigserial primary key, "word" character varying, "translation" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20231116114516"]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePgSearchDocuments (20231116225919)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (15.9ms)[0m  [1m[35mCREATE TABLE "pg_search_documents" ("id" bigserial primary key, "content" text, "searchable_type" character varying, "searchable_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE INDEX "index_pg_search_documents_on_searchable" ON "pg_search_documents" ("searchable_type", "searchable_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20231116225919"]]
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddFullTextSearchToWords (20231121152415)
+  [1m[35m (0.8ms)[0m  [1m[35m      ALTER TABLE 
+        words 
+      ADD 
+        COLUMN tsv_ingush_word TSVECTOR GENERATED ALWAYS AS (
+          to_tsvector(
+            'pg_catalog.simple', 
+             COALESCE(ingush_word, '')
+          )
+        ) STORED;
+[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7894266242681957880)[0m
+  
+StandardError (An error has occurred, all later migrations canceled:
+
+PG::UndefinedColumn: ОШИБКА:  столбец "ingush_word" не существует
+):
+  
+activerecord (7.0.8) lib/active_record/connection_adapters/postgresql/database_statements.rb:48:in `exec'
+activerecord (7.0.8) lib/active_record/connection_adapters/postgresql/database_statements.rb:48:in `block (2 levels) in execute'
+activesupport (7.0.8) lib/active_support/concurrency/share_lock.rb:187:in `yield_shares'
+activesupport (7.0.8) lib/active_support/dependencies/interlock.rb:41:in `permit_concurrent_loads'
+activerecord (7.0.8) lib/active_record/connection_adapters/postgresql/database_statements.rb:47:in `block in execute'
+activesupport (7.0.8) lib/active_support/concurrency/load_interlock_aware_monitor.rb:25:in `handle_interrupt'
+activesupport (7.0.8) lib/active_support/concurrency/load_interlock_aware_monitor.rb:25:in `block in synchronize'
+activesupport (7.0.8) lib/active_support/concurrency/load_interlock_aware_monitor.rb:21:in `handle_interrupt'
+activesupport (7.0.8) lib/active_support/concurrency/load_interlock_aware_monitor.rb:21:in `synchronize'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract_adapter.rb:752:in `block in log'
+activesupport (7.0.8) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract_adapter.rb:743:in `log'
+activerecord (7.0.8) lib/active_record/connection_adapters/postgresql/database_statements.rb:46:in `execute'
+activerecord (7.0.8) lib/active_record/migration.rb:965:in `block in method_missing'
+activerecord (7.0.8) lib/active_record/migration.rb:935:in `block in say_with_time'
+/usr/share/rvm/rubies/ruby-3.2.2/lib/ruby/3.2.0/benchmark.rb:296:in `measure'
+activerecord (7.0.8) lib/active_record/migration.rb:935:in `say_with_time'
+activerecord (7.0.8) lib/active_record/migration.rb:954:in `method_missing'
+db/migrate/20231121152415_add_full_text_search_to_words.rb:6:in `up'
+activerecord (7.0.8) lib/active_record/migration.rb:908:in `public_send'
+activerecord (7.0.8) lib/active_record/migration.rb:908:in `exec_migration'
+activerecord (7.0.8) lib/active_record/migration.rb:889:in `block (2 levels) in migrate'
+/usr/share/rvm/rubies/ruby-3.2.2/lib/ruby/3.2.0/benchmark.rb:296:in `measure'
+activerecord (7.0.8) lib/active_record/migration.rb:888:in `block in migrate'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:215:in `with_connection'
+activerecord (7.0.8) lib/active_record/migration.rb:887:in `migrate'
+activerecord (7.0.8) lib/active_record/migration.rb:1095:in `migrate'
+activerecord (7.0.8) lib/active_record/migration.rb:1409:in `block in execute_migration_in_transaction'
+activerecord (7.0.8) lib/active_record/migration.rb:1462:in `ddl_transaction'
+activerecord (7.0.8) lib/active_record/migration.rb:1408:in `execute_migration_in_transaction'
+activerecord (7.0.8) lib/active_record/migration.rb:1382:in `each'
+activerecord (7.0.8) lib/active_record/migration.rb:1382:in `migrate_without_lock'
+activerecord (7.0.8) lib/active_record/migration.rb:1331:in `block in migrate'
+activerecord (7.0.8) lib/active_record/migration.rb:1481:in `block in with_advisory_lock'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:215:in `with_connection'
+activerecord (7.0.8) lib/active_record/migration.rb:1496:in `with_advisory_lock_connection'
+activerecord (7.0.8) lib/active_record/migration.rb:1477:in `with_advisory_lock'
+activerecord (7.0.8) lib/active_record/migration.rb:1331:in `migrate'
+activerecord (7.0.8) lib/active_record/migration.rb:1166:in `up'
+activerecord (7.0.8) lib/active_record/migration.rb:1141:in `migrate'
+activerecord (7.0.8) lib/active_record/tasks/database_tasks.rb:262:in `migrate'
+activerecord (7.0.8) lib/active_record/migration.rb:137:in `block in <class:PendingMigrationError>'
+activesupport (7.0.8) lib/active_support/actionable_error.rb:28:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:19:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.6) lib/rack/proxy.rb:87:in `call'
+railties (7.0.8) lib/rails/engine.rb:530:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7894266242681957880)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePgSearchDocuments (20231116225919)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.9ms)[0m  [1m[35mDROP TABLE "pg_search_documents"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20231116225919"]]
+  [1m[36mTRANSACTION (12.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7894266242681957880)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7894266242681957880)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateWords (20231116114516)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.7ms)[0m  [1m[35mDROP TABLE "words"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20231116114516"]]
+  [1m[36mTRANSACTION (12.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7894266242681957880)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7894266242681957880)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateWords (20231116114516)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (21.6ms)[0m  [1m[35mCREATE TABLE "words" ("id" bigserial primary key, "word" character varying, "translation" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20231116114516"]]
+  [1m[36mTRANSACTION (6.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePgSearchDocuments (20231116225919)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (23.5ms)[0m  [1m[35mCREATE TABLE "pg_search_documents" ("id" bigserial primary key, "content" text, "searchable_type" character varying, "searchable_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (10.1ms)[0m  [1m[35mCREATE INDEX "index_pg_search_documents_on_searchable" ON "pg_search_documents" ("searchable_type", "searchable_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20231116225919"]]
+  [1m[36mTRANSACTION (7.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddFullTextSearchToWords (20231121152415)
+  [1m[35m (1.1ms)[0m  [1m[35m      ALTER TABLE 
+        words 
+      ADD 
+        COLUMN tsv word TSVECTOR GENERATED ALWAYS AS (
+          to_tsvector(
+            'pg_catalog.simple', 
+             COALESCE(word, '')
+          )
+        ) STORED;
+[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7894266242681957880)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7894266242681957880)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddFullTextSearchToWords (20231121152415)
+  [1m[35m (0.5ms)[0m  [1m[35m      ALTER TABLE 
+        words 
+      ADD 
+        COLUMN tsv word TSVECTOR GENERATED ALWAYS AS (
+          to_tsvector(
+            'pg_catalog.simple', 
+             COALESCE(word, '')
+          )
+        ) STORED;
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7894266242681957880)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7894266242681957880)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddFullTextSearchToWords (20231121152415)
+  [1m[35m (25.3ms)[0m  [1m[35m      ALTER TABLE 
+        words 
+      ADD 
+        COLUMN tsv_word TSVECTOR GENERATED ALWAYS AS (
+          to_tsvector(
+            'pg_catalog.simple', 
+             COALESCE(word, '')
+          )
+        ) STORED;
+[0m
+  [1m[35m (19.6ms)[0m  [1m[35mCREATE INDEX CONCURRENTLY "index_words_on_tsv_word" ON "words" USING gin ("tsv_word")[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20231121152415"]]
+  [1m[36mTRANSACTION (10.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddFullTextSearchToTranslations (20231125161210)
+  [1m[35m (33.0ms)[0m  [1m[35m      ALTER TABLE 
+        words 
+      ADD 
+        COLUMN tsv_translation TSVECTOR GENERATED ALWAYS AS (
+          to_tsvector(
+            'pg_catalog.simple', 
+             COALESCE(translation, '')
+          )
+        ) STORED;
+[0m
+  [1m[35m (25.2ms)[0m  [1m[35mCREATE INDEX CONCURRENTLY "index_words_on_tsv_translation" ON "words" USING gin ("tsv_translation")[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20231125161210"]]
+  [1m[36mTRANSACTION (12.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to RenameWordColumn (20231128114153)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "words" RENAME COLUMN "translation" TO "russian_word"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "words" RENAME COLUMN "word" TO "ingush_word"[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20231128114153"]]
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to RenameFullTextSearchToWords (20231128115243)
+  [1m[35m (17.9ms)[0m  [1m[35m      ALTER TABLE 
+        words 
+      ADD 
+        COLUMN tsv_ingush_word TSVECTOR GENERATED ALWAYS AS (
+          to_tsvector(
+            'pg_catalog.simple', 
+             COALESCE(ingush_word, '')
+          )
+        ) STORED;
+[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE INDEX CONCURRENTLY "index_words_on_tsv_ingush_word" ON "words" USING gin ("tsv_ingush_word")[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20231128115243"]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to RenameFullTextSearchToTranslations (20231128115800)
+  [1m[35m (32.1ms)[0m  [1m[35m      ALTER TABLE 
+        words 
+      ADD 
+        COLUMN tsv_russian_word TSVECTOR GENERATED ALWAYS AS (
+          to_tsvector(
+            'pg_catalog.simple', 
+             COALESCE(russian_word, '')
+          )
+        ) STORED;
+[0m
+  [1m[35m (38.3ms)[0m  [1m[35mCREATE INDEX CONCURRENTLY "index_words_on_tsv_russian_word" ON "words" USING gin ("tsv_russian_word")[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20231128115800"]]
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2024-03-17 16:51:33.894272"], ["updated_at", "2024-03-17 16:51:33.894272"]]
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(7894266242681957880)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/rails/actions" for 127.0.0.1 at 2024-03-17 19:51:42 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7894266242681957880)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7894266242681957880)[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2024-03-17 19:51:42 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WordsController#search as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/search.html.erb within layouts/application
+  Rendered shared/_words_results.html.erb (Duration: 0.5ms | Allocations: 318)
+  Rendered words/search.html.erb within layouts/application (Duration: 33.7ms | Allocations: 7415)
+  Rendered layout layouts/application.html.erb (Duration: 389.3ms | Allocations: 132003)
+Completed 500 Internal Server Error in 396ms (ActiveRecord: 0.0ms | Allocations: 135851)
+
+
+  
+ActionView::Template::Error (The asset "tailwind.css" is not present in the asset pipeline.
+):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+     9:     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+    10:     <%= javascript_importmap_tags %>
+    11: 
+    12: 
+  
+app/views/layouts/application.html.erb:9
+app/controllers/words_controller.rb:21:in `block (2 levels) in search'
+app/controllers/words_controller.rb:20:in `search'
+Started GET "/" for 127.0.0.1 at 2024-03-17 19:55:54 +0300
+Processing by WordsController#search as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/search.html.erb within layouts/application
+  Rendered shared/_words_results.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered words/search.html.erb within layouts/application (Duration: 1.0ms | Allocations: 342)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3607)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 3876)
+
+
+  
+ActionView::Template::Error (The asset "tailwind.css" is not present in the asset pipeline.
+):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+     9:     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+    10:     <%= javascript_importmap_tags %>
+    11: 
+    12: 
+  
+app/views/layouts/application.html.erb:9
+app/controllers/words_controller.rb:21:in `block (2 levels) in search'
+app/controllers/words_controller.rb:20:in `search'
+Started GET "/" for 127.0.0.1 at 2024-03-17 19:55:56 +0300
+Processing by WordsController#search as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/search.html.erb within layouts/application
+  Rendered shared/_words_results.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered words/search.html.erb within layouts/application (Duration: 0.9ms | Allocations: 342)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 3605)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 3874)
+
+
+  
+ActionView::Template::Error (The asset "tailwind.css" is not present in the asset pipeline.
+):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+     9:     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+    10:     <%= javascript_importmap_tags %>
+    11: 
+    12: 
+  
+app/views/layouts/application.html.erb:9
+app/controllers/words_controller.rb:21:in `block (2 levels) in search'
+app/controllers/words_controller.rb:20:in `search'
+Started GET "/" for 127.0.0.1 at 2024-03-17 19:55:58 +0300
+Processing by WordsController#search as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/search.html.erb within layouts/application
+  Rendered shared/_words_results.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered words/search.html.erb within layouts/application (Duration: 1.0ms | Allocations: 342)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 3603)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 3870)
+
+
+  
+ActionView::Template::Error (The asset "tailwind.css" is not present in the asset pipeline.
+):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+     9:     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+    10:     <%= javascript_importmap_tags %>
+    11: 
+    12: 
+  
+app/views/layouts/application.html.erb:9
+app/controllers/words_controller.rb:21:in `block (2 levels) in search'
+app/controllers/words_controller.rb:20:in `search'
+Started GET "/" for 127.0.0.1 at 2024-03-17 19:56:11 +0300
+Processing by WordsController#search as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/search.html.erb within layouts/application
+  Rendered shared/_words_results.html.erb (Duration: 0.4ms | Allocations: 293)
+  Rendered words/search.html.erb within layouts/application (Duration: 1.4ms | Allocations: 970)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 18459)
+Completed 200 OK in 17ms (Views: 17.1ms | ActiveRecord: 0.0ms | Allocations: 19328)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-17 19:56:18 +0300
+Processing by WordsController#search as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/search.html.erb within layouts/application
+  Rendered shared/_words_results.html.erb (Duration: 1.1ms | Allocations: 293)
+  Rendered words/search.html.erb within layouts/application (Duration: 4.1ms | Allocations: 973)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 4636)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms | Allocations: 5464)
+
+
+  
+ActionView::Template::Error (The asset "tailwind.css" is not present in the asset pipeline.
+):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+     9:     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+    10:     <%= javascript_importmap_tags %>
+    11: 
+    12: 
+  
+app/views/layouts/application.html.erb:9
+app/controllers/words_controller.rb:21:in `block (2 levels) in search'
+app/controllers/words_controller.rb:20:in `search'
+Started GET "/" for 127.0.0.1 at 2024-03-17 20:04:34 +0300
+Processing by WordsController#search as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/search.html.erb within layouts/application
+  Rendered shared/_words_results.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered words/search.html.erb within layouts/application (Duration: 1.0ms | Allocations: 342)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 3685)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 3953)
+
+
+  
+ActionView::Template::Error (The asset "tailwind.css" is not present in the asset pipeline.
+):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+     9:     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+    10:     <%= javascript_importmap_tags %>
+    11: 
+    12: 
+  
+app/views/layouts/application.html.erb:9
+app/controllers/words_controller.rb:21:in `block (2 levels) in search'
+app/controllers/words_controller.rb:20:in `search'
+Started GET "/" for 127.0.0.1 at 2024-03-17 20:04:35 +0300
+Processing by WordsController#search as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/search.html.erb within layouts/application
+  Rendered shared/_words_results.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered words/search.html.erb within layouts/application (Duration: 1.0ms | Allocations: 342)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 3684)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 3951)
+
+
+  
+ActionView::Template::Error (The asset "tailwind.css" is not present in the asset pipeline.
+):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+     9:     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+    10:     <%= javascript_importmap_tags %>
+    11: 
+    12: 
+  
+app/views/layouts/application.html.erb:9
+app/controllers/words_controller.rb:21:in `block (2 levels) in search'
+app/controllers/words_controller.rb:20:in `search'
+Started GET "/" for 127.0.0.1 at 2024-03-17 20:05:09 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WordsController#search as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/search.html.erb within layouts/application
+  Rendered shared/_words_results.html.erb (Duration: 0.4ms | Allocations: 318)
+  Rendered words/search.html.erb within layouts/application (Duration: 4.7ms | Allocations: 3561)
+  Rendered layout layouts/application.html.erb (Duration: 75.7ms | Allocations: 38850)
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 0.0ms | Allocations: 42115)
+
+
+  
+ActionView::Template::Error (The asset "tailwind.css" is not present in the asset pipeline.
+):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+     9:     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+    10:     <%= javascript_importmap_tags %>
+    11: 
+    12: 
+  
+app/views/layouts/application.html.erb:9
+app/controllers/words_controller.rb:21:in `block (2 levels) in search'
+app/controllers/words_controller.rb:20:in `search'
+Started GET "/" for 127.0.0.1 at 2024-03-17 20:05:10 +0300
+Processing by WordsController#search as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/search.html.erb within layouts/application
+  Rendered shared/_words_results.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered words/search.html.erb within layouts/application (Duration: 1.3ms | Allocations: 342)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 3694)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 3965)
+
+
+  
+ActionView::Template::Error (The asset "tailwind.css" is not present in the asset pipeline.
+):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+     9:     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+    10:     <%= javascript_importmap_tags %>
+    11: 
+    12: 
+  
+app/views/layouts/application.html.erb:9
+app/controllers/words_controller.rb:21:in `block (2 levels) in search'
+app/controllers/words_controller.rb:20:in `search'
+Started GET "/" for 127.0.0.1 at 2024-03-17 20:07:36 +0300
+Processing by WordsController#search as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/search.html.erb within layouts/application
+  Rendered shared/_words_results.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered words/search.html.erb within layouts/application (Duration: 1.0ms | Allocations: 342)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 3690)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 3959)
+
+
+  
+ActionView::Template::Error (The asset "tailwind.css" is not present in the asset pipeline.
+):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+     9:     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+    10:     <%= javascript_importmap_tags %>
+    11: 
+    12: 
+  
+app/views/layouts/application.html.erb:9
+app/controllers/words_controller.rb:21:in `block (2 levels) in search'
+app/controllers/words_controller.rb:20:in `search'
+Started GET "/" for 127.0.0.1 at 2024-03-17 20:08:22 +0300
+Processing by WordsController#search as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/search.html.erb within layouts/application
+  Rendered shared/_words_results.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered words/search.html.erb within layouts/application (Duration: 1.0ms | Allocations: 342)
+  Rendered layout layouts/application.html.erb (Duration: 143.3ms | Allocations: 78643)
+Completed 200 OK in 145ms (Views: 144.0ms | ActiveRecord: 0.0ms | Allocations: 78957)
+
+
+Started GET "/words/search?q=%D0%A0%D0%B5%D0%B4%D0%B8%D1%81&language=ingush" for 127.0.0.1 at 2024-03-17 20:08:26 +0300
+Processing by WordsController#search as HTML
+  Parameters: {"q"=>"Редис", "language"=>"ingush"}
+  [1m[36mWord Count (16.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "words" WHERE (tsv_ingush_word @@ to_tsquery('simple', 'Редис:*'))[0m
+  ↳ app/controllers/words_controller.rb:10:in `search'
+  Rendering layout layouts/application.html.erb
+  Rendering words/search.html.erb within layouts/application
+  [1m[36mWord Load (0.7ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE (tsv_ingush_word @@ to_tsquery('simple', 'Редис:*')) ORDER BY "words"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/shared/_words_results.html.erb:3
+  Rendered shared/_words_results.html.erb (Duration: 2.0ms | Allocations: 1451)
+  Rendered words/search.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1773)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 8575)
+Completed 200 OK in 59ms (Views: 8.4ms | ActiveRecord: 20.5ms | Allocations: 16776)
+
+
+Started GET "/words/search?q=%D0%A0%D0%B5%D0%B4%D0%B8%D1%81&language=ingush" for 127.0.0.1 at 2024-03-17 20:08:41 +0300
+Processing by WordsController#search as HTML
+  Parameters: {"q"=>"Редис", "language"=>"ingush"}
+  [1m[36mWord Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "words" WHERE (tsv_ingush_word @@ to_tsquery('simple', 'Редис:*'))[0m
+  ↳ app/controllers/words_controller.rb:10:in `search'
+  Rendering layout layouts/application.html.erb
+  Rendering words/search.html.erb within layouts/application
+  [1m[36mWord Load (0.6ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE (tsv_ingush_word @@ to_tsquery('simple', 'Редис:*')) ORDER BY "words"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/shared/_words_results.html.erb:3
+  Rendered shared/_words_results.html.erb (Duration: 2.4ms | Allocations: 645)
+  Rendered words/search.html.erb within layouts/application (Duration: 3.3ms | Allocations: 968)
+  Rendered layout layouts/application.html.erb (Duration: 34.6ms | Allocations: 11634)
+Completed 200 OK in 39ms (Views: 34.8ms | ActiveRecord: 1.2ms | Allocations: 12585)
+
+
+Started GET "/words/search?q=%D0%A0%D0%B5%D0%B4%D0%B8%D1%81&language=ingush" for 127.0.0.1 at 2024-03-17 20:08:42 +0300
+Processing by WordsController#search as HTML
+  Parameters: {"q"=>"Редис", "language"=>"ingush"}
+  [1m[36mWord Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "words" WHERE (tsv_ingush_word @@ to_tsquery('simple', 'Редис:*'))[0m
+  ↳ app/controllers/words_controller.rb:10:in `search'
+  Rendering layout layouts/application.html.erb
+  Rendering words/search.html.erb within layouts/application
+  [1m[36mWord Load (0.4ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE (tsv_ingush_word @@ to_tsquery('simple', 'Редис:*')) ORDER BY "words"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/shared/_words_results.html.erb:3
+  Rendered shared/_words_results.html.erb (Duration: 2.9ms | Allocations: 645)
+  Rendered words/search.html.erb within layouts/application (Duration: 3.8ms | Allocations: 968)
+  Rendered layout layouts/application.html.erb (Duration: 21.8ms | Allocations: 7895)
+Completed 200 OK in 26ms (Views: 22.0ms | ActiveRecord: 1.0ms | Allocations: 8838)
+
+
+Started GET "/words/search?q=%D0%A0%D0%B5%D0%B4%D0%B8%D1%81&language=ingush" for 127.0.0.1 at 2024-03-17 20:08:42 +0300
+Processing by WordsController#search as HTML
+  Parameters: {"q"=>"Редис", "language"=>"ingush"}
+  [1m[36mWord Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "words" WHERE (tsv_ingush_word @@ to_tsquery('simple', 'Редис:*'))[0m
+  ↳ app/controllers/words_controller.rb:10:in `search'
+  Rendering layout layouts/application.html.erb
+  Rendering words/search.html.erb within layouts/application
+  [1m[36mWord Load (0.6ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE (tsv_ingush_word @@ to_tsquery('simple', 'Редис:*')) ORDER BY "words"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/shared/_words_results.html.erb:3
+  Rendered shared/_words_results.html.erb (Duration: 2.6ms | Allocations: 645)
+  Rendered words/search.html.erb within layouts/application (Duration: 3.7ms | Allocations: 968)
+  Rendered layout layouts/application.html.erb (Duration: 22.1ms | Allocations: 7782)
+Completed 200 OK in 27ms (Views: 22.3ms | ActiveRecord: 1.3ms | Allocations: 8735)
+
+
