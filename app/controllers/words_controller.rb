@@ -28,6 +28,8 @@ class WordsController < ApplicationController
     @word = Word.find(params[:id])
   end
 
+
+
   private
 
   def search_params

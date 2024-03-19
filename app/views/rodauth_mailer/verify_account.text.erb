@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Email Styling</title>
-</head>
-<body>
-<div class="container">
-  <p class="message">Someone has created an account with this email address. If you did not create this account, please ignore this message. If you created this account, please go to <a href="<%= @rodauth.verify_account_email_link %>" class="link">verify the account</a>.</p>
-</div>
-</body>
-</html>
+Someone has created an account with this email address.  If you did not create
+this account, please ignore this message.  If you created this account, please go to
+<%= @rodauth.verify_account_email_link %>
+to verify the account.

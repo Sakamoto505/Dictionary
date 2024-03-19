@@ -27,7 +27,7 @@ class RodauthMain < Rodauth::Rails::Auth
 
     # The secret key used for hashing public-facing tokens for various features.
     # Defaults to Rails `secret_key_base`, but you can use your own secret key.
-    # hmac_secret "e9b36c70d9475ddc5965f35fa146ab71ccaa65e3a876e164e3d39682076e09c5636494c80bdb135e1e8a629f258e796008d43450711ed8061b180a066249c05b"
+    # hmac_secret "1f1c47e651bab1a58882265036fcfc8ab09c7b3be562ad13bf1bd78ba84a87a049573f7a7d0c0d51c554d644dca48c00489dbce10a32577a85dededc18037cfc"
 
     # Use path prefix for all routes.
     # prefix "/auth"
@@ -53,7 +53,7 @@ class RodauthMain < Rodauth::Rails::Auth
     # password_confirm_param "confirm_password"
 
     # Redirect back to originally requested location after authentication.
-    login_return_to_requested_location? true
+    # login_return_to_requested_location? true
     # two_factor_auth_return_to_requested_location? true # if using MFA
 
     # Autologin the user after they have reset their password.
@@ -100,7 +100,7 @@ class RodauthMain < Rodauth::Rails::Auth
 
     # Override default flash messages.
     # create_account_notice_flash "Your account has been created. Please verify your account by visiting the confirmation link sent to your email address."
-    require_login_error_flash "Login is required for accessing this page"
+    # require_login_error_flash "Login is required for accessing this page"
     # login_notice_flash nil
 
     # ==> Validation
@@ -172,7 +172,5 @@ class RodauthMain < Rodauth::Rails::Auth
     # reset_password_deadline_interval Hash[hours: 6]
     # verify_login_change_deadline_interval Hash[days: 2]
     # remember_deadline_interval Hash[days: 30]
-
-    login_lable "Email"
   end
 end
