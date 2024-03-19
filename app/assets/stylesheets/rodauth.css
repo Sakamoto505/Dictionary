@@ -1,22 +1,37 @@
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f5f5f5;
-    margin: 0;
+/* application.scss */
+
+/* Общие стили для форм аутентификации */
+.rodauth-form {
+    @apply w-full max-w-sm;
 }
 
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
+.rodauth-form .mb-6 {
+    @apply mb-6;
 }
 
-.message {
-    font-size: 16px;
-    line-height: 1.5;
-    color: #333;
+.rodauth-form label {
+    @apply block text-sm font-semibold;
 }
 
-.link {
-    color: #007bff;
-    text-decoration: none;
+.rodauth-form input[type="email"],
+.rodauth-form input[type="password"] {
+    @apply mt-2 text-sm w-full px-3 py-2 border rounded-md dark:bg-gray-900 dark:text-gray-100 dark:focus:bg-gray-800;
+}
+
+.rodauth-form input[type="email"]:focus,
+.rodauth-form input[type="password"]:focus {
+    @apply focus:border-transparent focus:ring-0;
+}
+
+.rodauth-form input[type="email"].error,
+.rodauth-form input[type="password"].error {
+    @apply border-red-600 focus:ring-red-600 focus:border-red-600 dark:border-red-400 dark:focus:ring-red-400;
+}
+
+.rodauth-form .text-error {
+    @apply block mt-1 text-red-600 text-xs dark:text-red-400;
+}
+
+.rodauth-form input[type="submit"] {
+    @apply w-full px-8 py-3 cursor-pointer font-semibold text-sm rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600 dark:bg-emerald-400 dark:hover:bg-emerald-500 dark:text-gray-900 dark:focus:ring-emerald-400 dark:focus:ring-offset-current;
 }

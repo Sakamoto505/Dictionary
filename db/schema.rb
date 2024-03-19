@@ -10,9 +10,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_11_28_115800) do
+ActiveRecord::Schema[7.0].define(version: 2024_03_17_175701) do
   # These are extensions that must be enabled in order to support this database
+  enable_extension "citext"
   enable_extension "plpgsql"
+
+  create_table "account_login_change_keys", force: :cascade do |t|
+    t.string "key", null: false
+    t.string "login", null: false
+    t.datetime "deadline", null: false
+  end
+
+  create_table "account_password_reset_keys", force: :cascade do |t|
+    t.string "key", null: false
+    t.datetime "deadline", null: false
+    t.datetime "email_last_sent", default: -> { "CURRENT_TIMESTAMP" }, null: false
+  end
+
+  create_table "account_remember_keys", force: :cascade do |t|
+    t.string "key", null: false
+    t.datetime "deadline", null: false
+  end
+
+  create_table "account_verification_keys", force: :cascade do |t|
+    t.string "key", null: false
+    t.datetime "requested_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
+    t.datetime "email_last_sent", default: -> { "CURRENT_TIMESTAMP" }, null: false
+  end
+
+  create_table "accounts", force: :cascade do |t|
+    t.integer "status", default: 1, null: false
+    t.citext "email", null: false
+    t.string "password_hash"
+    t.index ["email"], name: "index_accounts_on_email", unique: true, where: "(status = ANY (ARRAY[1, 2]))"
+  end
 
   create_table "pg_search_documents", force: :cascade do |t|
     t.text "content"
@@ -28,12 +59,18 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_28_115800) do
     t.string "russian_word"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.virtual "tsv_word", type: :tsvector, as: "to_tsvector('simple'::regconfig, (COALESCE(ingush_word, ''::character varying))::text)", stored: true
     t.virtual "tsv_translation", type: :tsvector, as: "to_tsvector('simple'::regconfig, (COALESCE(russian_word, ''::character varying))::text)", stored: true
     t.virtual "tsv_ingush_word", type: :tsvector, as: "to_tsvector('simple'::regconfig, (COALESCE(ingush_word, ''::character varying))::text)", stored: true
     t.virtual "tsv_russian_word", type: :tsvector, as: "to_tsvector('simple'::regconfig, (COALESCE(russian_word, ''::character varying))::text)", stored: true
     t.index ["tsv_ingush_word"], name: "index_words_on_tsv_ingush_word", using: :gin
     t.index ["tsv_russian_word"], name: "index_words_on_tsv_russian_word", using: :gin
     t.index ["tsv_translation"], name: "index_words_on_tsv_translation", using: :gin
+    t.index ["tsv_word"], name: "index_words_on_tsv_word", using: :gin
   end
 
+  add_foreign_key "account_login_change_keys", "accounts", column: "id"
+  add_foreign_key "account_password_reset_keys", "accounts", column: "id"
+  add_foreign_key "account_remember_keys", "accounts", column: "id"
+  add_foreign_key "account_verification_keys", "accounts", column: "id"
 end
